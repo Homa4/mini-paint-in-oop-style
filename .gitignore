@@ -2,3 +2,5 @@ pointDraw.py
 rubberBand.py
 gumTrail.py
 info_for_lab
+.vscode
+__pycache__
