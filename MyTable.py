@@ -1,20 +1,17 @@
 import pygame
 
 class MyTable:
-    instance = None
-
-    def __new__(cls):
-        if MyTable.instance is None:
-            MyTable.instance = super().__new__(cls)
-        return MyTable.instance
-
+    shared_state = {}
+    
     def __init__(self):
-        self.screen = None
-        self.acceleretor = []
-        self.show_ghost_table = False
-        self.ghost_table = None
-        self.table_data = [["ID", "Start", "End"]]
-        self.scroll_offset = 0
+        self.__dict__ = self.shared_state
+        if not self.shared_state:
+            self.screen = None
+            self.show_ghost_table = False
+            self.ghost_table = None
+            self.table_data = [["ID", "Start", "End"]]
+            self.scroll_offset = 0
+            
         
         
     def store_figure(self, element):
