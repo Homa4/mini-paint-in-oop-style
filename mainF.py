@@ -11,9 +11,9 @@ screen.fill('white')
 table_sam = MyTable()
 table_sam.screen = screen
 
-# print('table_sam->1', table_sam)
-# table_sam2 = MyTable()
-# print('table_sam->2', table_sam2)
+print('table_sam->1', table_sam)
+table_sam2 = MyTable()
+print('table_sam->2', table_sam2)
 
 shape_editor = ShapeEditor(field, screen, clock, table_sam)
 
